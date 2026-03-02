@@ -30,6 +30,7 @@ import CompanySettings from './pages/company/Settings';
 
 // NAFDAC Pages
 import NAFDACLogin from './pages/nafdac/Login';
+import NAFDACSignup from './pages/nafdac/Signup';
 import NAFDACDashboard from './pages/nafdac/NationalDashboard';
 import NAFDACAlerts from './pages/nafdac/Alerts';
 import NAFDACCases from './pages/nafdac/Cases';
@@ -103,6 +104,7 @@ function App() {
 
         {/* NAFDAC Auth */}
         <Route path="/nafdac/login" element={<NAFDACLogin />} />
+        <Route path="/nafdac/signup" element={<NAFDACSignup />} />
 
         {/* Protected Consumer Routes */}
         <Route path="/home" element={<ConsumerProtectedRoute><Home /></ConsumerProtectedRoute>} />

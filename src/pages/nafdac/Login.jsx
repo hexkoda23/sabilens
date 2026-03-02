@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Icon from '../../components/common/Icon';
 import Card from '../../components/common/Card';
 import Button from '../../components/common/Button';
@@ -12,6 +12,7 @@ const NAFDACLogin = () => {
     password: ''
   });
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState('');
   const [touched, setTouched] = useState({});
 
   const [showTermsModal, setShowTermsModal] = useState(false);
@@ -186,6 +187,11 @@ const NAFDACLogin = () => {
             >
               Access NAFDAC Dashboard
             </Button>
+
+            <p className="text-center text-sm text-gray-500 mt-4">
+              Authorized officer without access?{' '}
+              <Link to="/nafdac/signup" className="text-primary font-bold hover:underline">Request access here</Link>
+            </p>
           </form>
 
           {/* Regulatory Links */}
